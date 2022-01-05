@@ -6,26 +6,26 @@ namespace Frozen
 {
     class Program
     {
-        class Frozen
+        class SecretSanta
         {
-            string nimi;
-            string soov;
+            string name;
+            string gift;
 
-            public Frozen(string _nimi, string _soov)
+            public SecretSanta(string _name, string _gift)
             {
-                nimi = _nimi;
-                soov = _soov;
+                name = _name;
+                gift = _gift;
             }
 
             //getters
-            public string Nimi
+            public string Name
             {
-                get { return nimi; }
+                get { return name; }
             }
 
-            public string Soov
+            public string Gift
             {
-                get { return soov; }
+                get { return gift; }
             }
         }
 
@@ -33,23 +33,21 @@ namespace Frozen
 
         static void Main(string[] args)
         {
-            List<Frozen> myFrozen = new List<Frozen>();
-            string[] frozenFromFile = GetDataFromFile();
+            List<SecretSanta> mySecretSanta = new List<SecretSanta>();
+            string[] santaFromFile = GetDataFromFile();
 
-            foreach (string line in frozenFromFile)
+            foreach (string line in santaFromFile)
             {
                 string[] tempArray = line.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
-                //Console.WriteLine($"title from TempArray: {tempArray[0]}");
-                //Console.WriteLine($"rating from TempArray: {tempArray[1]}");
-                //Console.WriteLine($"year from TempArray: {tempArray[2]}");
-                Frozen newFrozen = new Frozen(tempArray[0], tempArray[1]);
-                myFrozen.Add(newFrozen);
+               
+                SecretSanta newSanta = new SecretSanta(tempArray[0], tempArray[1]);
+                mySecretSanta.Add(newSanta);
 
             }
 
-            foreach (Frozen frozenFromList in myFrozen)
+            foreach (SecretSanta santaFromList in mySecretSanta)
             {
-                Console.WriteLine($"{frozenFromList.Nimi} wants {frozenFromList.Soov} for Christmas.");
+                Console.WriteLine($"{santaFromList.Name} wants {santaFromList.Gift} for Christmas.");
             }
 
 
@@ -59,7 +57,7 @@ namespace Frozen
         }
         public static string[] GetDataFromFile()
         {
-            string filePath = @"C:\Users\...\Programmeerimine\Failid\frozen.txt";
+            string filePath = @"C:\Users\Jalmar\OneDrive\KRG51\Programmeerimine\Failid\frozen.txt";
             string[] dataFromFile = File.ReadAllLines(filePath);
             return dataFromFile;
         }

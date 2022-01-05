@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOPAndFiles", "OOPAndFiles\OOPAndFiles.csproj", "{D0C01B09-0752-4B6F-81B4-52187485AD27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOPAndFiles", "OOPAndFiles\OOPAndFiles.csproj", "{D0C01B09-0752-4B6F-81B4-52187485AD27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frozen", "Frozen\Frozen.csproj", "{2E6044FC-4E97-4334-8CE8-A9BC9080CCEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrozenSecretSanta", "Frozen\FrozenSecretSanta.csproj", "{2E6044FC-4E97-4334-8CE8-A9BC9080CCEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
